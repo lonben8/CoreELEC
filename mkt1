@@ -1,0 +1,9 @@
+#!/bin/bash 
+
+rm build.CoreELEC-Phicomm-T1.arm-9.2-devel/.stamps/linux -rf
+rm build.CoreELEC-Phicomm-T1.arm-9.2-devel/.stamps/u-boot* -rf
+rm build.CoreELEC-Phicomm-T1.arm-9.2-devel/device-trees-amlogic* -rf
+rm build.CoreELEC-Phicomm-T1.arm-9.2-devel/.stamps/device-trees-amlogic/ -rf
+
+PROJECT=Amlogic ARCH=arm DEVICE=Phicomm-T1 CUSTOM_VERSION=9.2.7 make image -j 13
+
