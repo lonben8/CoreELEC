@@ -117,7 +117,6 @@ install_to_nand() {
     read -p "Would you like to reboot now [y/N]? " choice
     case "$choice" in
       [yY]*)
-        /usr/sbin/fw_setenv start_autoscript "if usb start ; then run start_usb_autoscript; fi; if ext4load mmc 1:b 1020000 /n1_autoscript; then autoscr 1020000; fi;"
         /usr/sbin/reboot
         ;;
     esac
